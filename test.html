@@ -22,9 +22,11 @@
 
     function getLightValue() {
       Puck.eval("BTN.read()", function(v) {   
-                if (v == true) {
+                if (v == "true") {
            window.alert("asd"+v);
-         }
+         } else {
+          console.log(v);
+                }
         setTimeout(function() {
           getLightValue();
         }, 250);
